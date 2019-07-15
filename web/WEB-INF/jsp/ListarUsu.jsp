@@ -16,7 +16,7 @@
             
             <div class="card border-info">
                 <div class="card header-info">
-                    <a href="agregar.htm">Registrar</a>
+                    <a href="registrar.htm">Registrar</a>
             </div>
             </div>
             <div class="card-body">
@@ -29,7 +29,8 @@
                             <th>Acciones</th>
                          
                         </tr>
-                    </thead>
+                    </the
+                    
                     <tbody>
                         <c:forEach var="datos" items="${lista}">
                         <tr>
@@ -38,8 +39,8 @@
                             <td>${datos.Nombre}</td>
                             <td>${datos.Clave}</td>
                             <td>
-                                <a href="Editar.htm?Id=${datos.Id}" class="btn btl-warding">Editar</a>
-                                <a href="Eliminar.html?Id=${datos.Id}"class="btn btn-danger">Eliminar</a>
+                                <a href="Editar.htm?Id=${datos.Id}" class="btn btn-warding">Editar</a>
+                                <a href="Eliminar.htm?Id=${datos.Id}"class="btn btn-danger">Eliminar</a>
                             </td>
                             
                         </tr>

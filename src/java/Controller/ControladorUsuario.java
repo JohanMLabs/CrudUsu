@@ -23,6 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author blanclabs
  */
 @RestController
+@Controller
 public class ControladorUsuario {
 
     Conexion con = new Conexion();
@@ -31,13 +32,13 @@ public class ControladorUsuario {
     List datos;
     int Id;
 
-    @RequestMapping("index.htm")
+    @RequestMapping("ListarUsu.htm")
     public ModelAndView Listar() {
 
         String sql = "Select * from usuario";
         datos = this.jdbcTemplate.queryForList(sql);
         mav.addObject("lista", datos);
-        mav.setViewName("index");
+        mav.setViewName("ListarUsu");
         return mav;
     }
 
@@ -68,12 +69,12 @@ public class ControladorUsuario {
 
     @RequestMapping(value = "Editar.htm", method = RequestMethod.POST)
     public ModelAndView Editar(UsuarioVo u) {
-        String sql = "Update usuario set Nombre=?,Clave=? where Id=?";
-        this.jdbcTemplate.update(sql, u.getNombre(), u.getClave(), Id);
+        String sql = "Update usuario set Nombre=?,Clave=? where Id="+Id;
+        this.jdbcTemplate.update(sql, u.getNombre(), u.getClave());
 
-//return ModelAndView("redierct:/index.htm");
-        mav.setViewName("Listar");
-        return mav;
+return new ModelAndView("redierct:/index.htm");
+//        mav.setViewName("Listar");
+  //      return mav;
 
     }
 

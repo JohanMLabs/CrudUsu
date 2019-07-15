@@ -139,8 +139,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                            <td>\r\n");
           out.write("                                <a href=\"Editar.htm?Id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${datos.Id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"btn btl-warding\">Editar</a>\r\n");
-          out.write("                                <a href=\"Eliminar.html?Id=");
+          out.write("\" class=\"btn btn-warding\">Editar</a>\r\n");
+          out.write("                                <a href=\"Eliminar.htm?Id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${datos.Id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\"class=\"btn btn-danger\">Eliminar</a>\r\n");
           out.write("                            </td>\r\n");

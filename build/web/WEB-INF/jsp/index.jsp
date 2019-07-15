@@ -39,8 +39,8 @@
                             <td>${datos.Nombre}</td>
                             <td>${datos.Clave}</td>
                             <td>
-                                <a href="Editar.htm?Id=${datos.Id}" class="btn btl-warding">Editar</a>
-                                <a href="Eliminar.html?Id=${datos.Id}"class="btn btn-danger">Eliminar</a>
+                                <a href="Editar.htm?Id=${datos.Id}" class="btn btn-warding">Editar</a>
+                                <a href="Eliminar.htm?Id=${datos.Id}"class="btn btn-danger">Eliminar</a>
                             </td>
                             
                         </tr>

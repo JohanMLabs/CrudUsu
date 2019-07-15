@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>JSP Editar</title>
     </head>
     <body>
           <h1>Editar</h1>
@@ -22,6 +22,8 @@
                         <input type="text" name="Nombre" value="${lista[0].Nombre}">
                         <label>Contraseña</label>
                         <input type="password" name="Clave" value="${lista[0].Clave}">
+                        <input type="submit" value="Actualizar" class="btn btn-success">
+                        <a href="index.htm" class="btn btn-success"></a>
                     </form>
                 </div>
             </div>

@@ -20,23 +20,51 @@
         <property name="mappings">
                <props>
                
-              <prop key="index.htm">ControladorUsuario</prop>
+            <prop key="index.htm">indexController</prop>
+            <prop key="ListarUsu.htm">ControladorUsuario</prop>
+            <!-- <prop key="index.htm">ControladorUsuario</prop>
                 <prop key="ListarUsu.htm">ControladorUsuario</prop>
                 <prop key="Editar.htm">ControladorUsuario</prop>
                 <prop key="registrar.htm">ControladorUsuario</prop>
-                <prop key="Eliminar.htm">ControladorUsuario</prop> 
+                <prop key="Eliminar.htm">ControladorUsuario</prop> -->
               
                     </props>
         </property>
     </bean>
+<!--
+<bean id="ds"
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+    <property name="url" value="jdbc:mysql://localhost:3306/CrudUsu" />
+    <property name="username" value="root" />
+    <property name="password" value="" />
+</bean>
+-->
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/jsp/"
           p:suffix=".jsp" />
 
+   
 
-<bean name="ControladorUsuario" class="Controller.ControladorUsuario"/>
+        <bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" /> 
+        <bean name="ControladorUsuario" class="Controller.ControladorUsuario"/>
+    
 
-
+  <!--  <bean name="ControladorUsuario" class="Controller.ControladorUsuario"/> -->
+<!--
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="index" value="/jsp/"/>
+    <property name="registrar" value=".jsp"/>
+</bean>  
+<bean id="messageSource"
+     class="org.springframework.context.support.ResourceBundleMessageSource">
+     <property name="usuario" value="es/ua/jtech/spring/mvc/mensajesWeb"/>
+</bean>
+ <context:component-scan base-package="es.ua.jtech.spring.mvc"/>
+       <mvc:annotation-driven/> -->
 </beans>
